@@ -4,7 +4,6 @@
   color: seashell;
   background-color: black;
   opacity: 0.9;
-  text-align: center;
 }
 
 /* Header */
@@ -16,15 +15,16 @@ header {
   border-bottom: 1px solid seashell;
   z-index: 1;
   width: 100%;
+  margin-left: 10px;
+  /*align-content: center;*/
 }
 .logo {
   display: flex;
   flex-grow: 1;
+  padding-top: 5px;
 }
 header img {
-  display: flex;
   height: 50px;
-  margin-left: 10px;
 }
 header nav {
   display: inline-block;
@@ -43,16 +43,20 @@ div {
 }
 body {
   display: flex;
+  justify-content: center;
+  /*text-align: center;*/
+  /*align-content: center;*/
 }
 main {
   padding-top: 69px;
   display: flex;
-  text-align: center;
   flex-direction: column;
+  justify-content: center;
 }
 #mission {
   width: 1200px;
   background-image: url("../Images/background.jpg");
+  display: flex;
   height: 700px;
   margin-left: 50px;
 }
