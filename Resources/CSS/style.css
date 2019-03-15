@@ -4,17 +4,20 @@
   font-family: helvetica;
   font-size: 22px;
   color: seashell;
-  background-color: black;
   text-align: center;
 }
-h2 {
-  font-size: 32px;
+h2 { /* This is the spec, but isn't it incorrect to skip header #s? */
+  font-size: 34px; /* Specs didn't say size - just guessing */
+}
+h3 {
+  font-size: 26px;
+}
+h2, h3, h4 {
   margin: 0;
   padding: 10px
 }
-h4 {
-  margin: 0;
-  padding: 10px
+h5 {
+  font-size: 18px;
 }
 
 /* Header */
@@ -26,9 +29,9 @@ header {
   border-bottom: 1px solid seashell;
   z-index: 1;
   width: 100%;
-  margin-left: 10px;
   align-items: center;
   top: 0;
+  background-color: black;
 }
 .logo {
   display: flex;
@@ -36,6 +39,7 @@ header {
 }
 header img {
   height: 50px;
+  padding-left: 10px;
 }
 header nav {
   display: inline-block;
@@ -48,19 +52,16 @@ header nav {
 
 /* Content */
 
-div {
-  border: 1px solid cyan;
-}
 body {
   display: flex;
   justify-content: center;
+  background-color: black;
 }
 main {
   display: flex;
-  padding-top: 70px;
+  padding-top: 62px; /* I don't know why, but any more shows a black gap above */
   flex-direction: column;
-  justify-content: center;
-  opacity: 0.9;
+  opacity: 0.9; /* the specs made it seem like the whole page should be 0.9... */
 }
 #mission {
   display: flex;
@@ -71,8 +72,7 @@ main {
 }
 .missionbanner {
   width: 1200px;
-  text-align: center;
-  padding: 0;
+  background-color: black;
 }
 #teas {
   display: flex;
@@ -80,8 +80,7 @@ main {
   flex-direction: column;
   text-align: center;
   padding-top: 70px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin: 0 100px;
 }
 .teainfo {
   display: flex;
@@ -93,16 +92,48 @@ main {
 }
 .tea img {
   display: block;
+  width: 300px;
   height: 200px;
   margin: 10px;
-  opacity: 0.9;
 }
 .tea span {
   display: block;
   font-weight: bold;
   padding: 5px;
 }
-.locations {
+#locations {
   display: flex;
-  margin-top: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-image: url("../Images/locations.jpg");
+  height: 500px;
+  margin-top: 70px;
+}
+#locations h2 {
+  width: 100%;
+  padding-bottom: 10px;
+}
+.addresses {
+  display: flex;
+  justify-content: center;
+  opacity: 1; /* in specs, but not necessary - no difference... */
+}
+.address {
+  display: flex;
+  width: 280px;
+  background-color: black;
+  padding: 10px;
+  margin: 5px 20px;
+  flex-direction: column;
+  align-items: space-between;
+}
+.address p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+footer h5 {
+  text-align: left;
+  padding-left: 20px;
 }
